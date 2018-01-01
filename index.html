@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Tweak10
+        </title>
+        <link rel="stylesheet" href="style.css">
+		<link rel="icon" type="image/png" href="Icons/Logo.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+			<a href="https://github.com/F0RCE" target="_blank"><img src="Icons/Logo.png" style="width:52px"></a>
+			<div id="titleID"><h1>Tweak10</h1></div>
+        </header>
+        <form id="scripts" method="GET" action="PS1.php" name="scripts">
+			<div id="bodyID">
+				<div id="privacyID">
+					<h2>
+						Privacy
+					</h2>
+					<div id="PrivacySettings">
+						<input type="checkbox" name="disableTelemetry" value="Yes">Disable telemetry<br>
+						<input type="checkbox" name="disableWiFiSense" value="Yes">Disable Wi-Fi Sense<br>
+						<input type="checkbox" name="disableBing" value="Yes">Disable web search in Start Menu<br>
+						<input type="checkbox" name="disableLocationTracking" value="Yes">Disable location tracking<br>
+						<input type="checkbox" name="restrictP2P" value="Yes">Disable peer 2 peer windows updates<br>
+						<input type="checkbox" name="disableAutologger" value="Yes">Disable AutoLogger and tracking services<br>
+						<input type="checkbox" name="disableAdvertisingID" value="Yes">Disable Advertising ID<br>
+						<input type="checkbox" name="disableWebsiteLang" value="Yes">Disable websites acces to language list<br>
+						<input type="checkbox" name="disableAppLaunchTracking" value="Yes">Disable app launch tracking<br>
+						<input type="checkbox" name="disableAppLocation" value="Yes">Disable apps access to location<br>
+						<input type="checkbox" name="disableAppCamera" value="Yes">Disable apps access to the camera<br>
+						<input type="checkbox" name="disableAppMic" value="Yes">Disable apps access to the microphone<br>
+						<input type="checkbox" name="disableAppNoti" value="Yes">Disable apps access to notifications<br>
+						<input type="checkbox" name="disableAppSpeech" value="Yes">Disable apps access to speech, inknig &#38; typing<br>
+						<input type="checkbox" name="disableAppAccount" value="Yes">Disable apps access to your account info<br>
+						<input type="checkbox" name="disableAppContacts" value="Yes">Disable apps access to contacts<br>
+						<input type="checkbox" name="disableAppCalendar" value="Yes">Disable apps access to calendar<br>
+						<input type="checkbox" name="disableAppCall" value="Yes">Disable apps access to call history<br>
+						<input type="checkbox" name="disableAppEmail" value="Yes">Disable apps access to emails<br>
+						<input type="checkbox" name="disableAppTasks" value="Yes">Disable apps access to tasks<br>
+						<input type="checkbox" name="disableAppMessaging" value="Yes">Disable apps access to messaging<br>
+						<input type="checkbox" name="disableAppRadios" value="Yes">Disable apps access to control radios<br>
+						<input type="checkbox" name="disableAppOther" value="Yes">Disable apps access to devices<br>
+						<input type="checkbox" name="disableFeedback" value="Yes">Disable feedback<br>
+						<input type="checkbox" name="disableBackgroundApps" value="Yes">Disable background apps<br>
+						<input type="checkbox" name="disableAppDiagnostics" value="Yes">Disable apps access to app diagnostics<br>
+						<input type="checkbox" name="disableSharedExpierence" value="Yes">Disable shared expierence<br>
+						<input type="checkbox" name="disableHandwriteSharing" value="Yes">Disable sharing of handwrite data<br>
+						<input type="checkbox" name="disableProblemRecorder" value="Yes">Disable problem steps recorder<br>
+						<input type="checkbox" name="disableBiometrics" value="Yes">Disable biometrics<br>
+						<input type="checkbox" name="disableBluetoothAds" value="Yes">Disable advertisment via bluetooth<br>
+						<input type="checkbox" name="disableCEIP" value="Yes">Disable Customer Experience Improvement Program<br>
+						<input type="checkbox" name="disableAIT" value="Yes">Disable Application Impact Telemetry<br>
+						<input type="checkbox" name="disableACPI" value="Yes">Disable Inventory Collector<br>
+						<input type="checkbox" name="disableExperimentation" value="Yes">Disable experimentation on your PC<br>
+					</div>
+				</div>
+				<div id="serviceID">
+					<h2>
+						Serivces
+					</h2>
+					<div id="serviceTweaks">
+						<input type="checkbox" name="disableMapUpdate" value="Yes">Disable automatic maps update<br>
+						<input type="checkbox" name="disableErrorReport" value="Yes">Disable error reporting<br>
+						<input type="checkbox" name="lowerUAC" value="Yes">Lower the UAC level<br>
+						<input type="checkbox" name="disableIAS" value="Yes">Disable administrative shares<br>
+						<input type="checkbox" name="disableSMB" value="Yes">Disable SMB 1.0 protocol<br>
+						<input type="checkbox" name="disableUpdateRestart" value="Yes">Disable automatic restart after a Windows update<br>
+						<input type="checkbox" name="disableHomeGroup" value="Yes">Disable Home Groups services<br>
+						<input type="checkbox" name="disableRemoteAssistance" value="Yes">Disable remote assistance<br>
+						<input type="checkbox" name="disableRemoteDesktop" value="Yes">Disable remote desktop<br>
+						<input type="checkbox" name="disableDriverUD" value="Yes">Disable automatic drivers update<br>
+						<input type="checkbox" name="installnet35" value="Yes">Install .NET 3.5<br>
+						<input type="checkbox" name="disableSuper" value="Yes">Disable Superfetch service<br>
+						<input type="checkbox" name="disableFast" value="Yes">Disable Fast Startup<br>
+						<input type="checkbox" name="disableAutoPlay" value="Yes">Disable Autoplay and Autorun<br>
+						<input type="checkbox" name="disableSticky" value="Yes">Disable 'Sticky Keys' prompt<br>
+						<input type="checkbox" name="enableNumlock" value="Yes">Enable NumLock after startup<br>
+						<input type="checkbox" name="disableWMP" value="Yes">Disable Windows Media Player<br>
+						<input type="checkbox" name="disableWFC" value="Yes">Disable 'Work Folders Client'<br>
+						<input type="checkbox" name="disableXPS" value="Yes">Disable XPS<br>
+						<input type="checkbox" name="disableIE11" value="Yes">Disable Internet Explorer 11<br>
+						<input type="checkbox" name="setHighPerformance" value="Yes">Set Power Plan to High Performance<br>
+						<input type="checkbox" name="updateHosts" value="Yes">Update Hosts file<br>
+						<input type="checkbox" name="optoutDEP" value="Yes">Opt out of 'Data Execution Prevention'<br>
+						<input type="checkbox" name="enableF8" value="Yes">Enable F8 Boot Menu Options<br>
+						<input type="checkbox" name="disableOneDrive" value="Yes">Disable OneDrive<br>
+						<input type="checkbox" name="uninstallOneDrive" value="Yes">Uninstall OneDrive<br>
+						<input type="checkbox" name="enableWSL" value="Yes">Install Linux Subsystem<br>
+						<input type="checkbox" name="enableStorage" value="Yes">Enable storage sense<br>
+						<input type="checkbox" name="setDNS" value="Yes">Set the DNS to google's<br>
+						<input type="checkbox" id="renamePC" name="renamePC" value="Yes" onClick="showNameBox()">Rename The PC
+						<div id="newPCNameDiv" style="display: none;">
+							<input id="newPCName" name="newPCName" style="width:30%;margin-left:18px;height:16px;margin:0 auto;">
+						</div>
+						<br><input type="checkbox" name="deleteTemp" value="Yes">Delete temp files<br>
+						<input id="moreOptions" type="checkbox" name="installChoco" value="Yes" onClick="showPrograms()">Install Chocolatey<br>
+						<div id="whichToInstall" style="display:none;">
+							<ul style="width:95%;">
+								<li><input type="button" name="chrome" id="chrome" onClick="addMoreApps('googlechrome')"></li>
+								<li><input type="button" name="firefox" id="firefox" onClick="addMoreApps('firefox')"></li>
+								<li><input type="button" name="sevenZip" id="sevenZip" onClick="addMoreApps('7zip.install')"></li>
+								<li><input type="button" name="peazip.install" id="peazip" onClick="addMoreApps('PeaZip')"></li>
+								<li><input type="button" name="vlc" id="vlc" onClick="addMoreApps('vlc')"></li>
+								<li><input type="button" name="foobar2000" id="foobar2000" onClick="addMoreApps('foobar2000')"></li>
+								<li><input type="button" name="Spotify" id="spotify" onClick="addMoreApps('spotify')"></li>
+								<li><input type="button" name="Notepad++" id="notepadplusplus" onClick="addMoreApps('notepadplusplus.install')"></li>
+								<li><input type="button" name="vsCode" id="vsCode" onClick="addMoreApps('visualstudiocode')"></li>
+								<li><input type="button" name="paintNet" id="paintNet" onClick="addMoreApps('paint.net')"></li>
+								<li><input type="button" name="gimp" id="gimp" onClick="addMoreApps('gimp')"></li>
+								<li><input type="button" name="irfanView" id="irfanView" onClick="addMoreApps('irfanview')"></li>
+								<li><input type="button" name="inkscape" id="inkscape" onClick="addMoreApps('inkscape')"></li>
+								<li><input type="button" name="libreOffice" id="libreOffice" onClick="addMoreApps('libreoffice')"></li>
+								<li><input type="button" name="malwareBytes" id="malwareBytes" onClick="addMoreApps('malwarebytes')"></li>
+								<li><input type="button" name="qBittorrent" id="qBittorrent" onClick="addMoreApps('qbittorrent')"></li>
+								<li><input type="button" name="steam" id="steam" onClick="addMoreApps('steam')"></li>
+								<li><input type="button" name="moreApps" id="moreApps" onClick="openChoco()"></li>
+							</ul>
+							<input id="costumPrograms" name="installPrograms"><br>
+							<input type="checkbox" id="chocoTask" name="chocoTask" value="Yes">Create a scheduled task for chocolatey<br>
+						</div>
+					</div>
+				</div>
+				<div id="uiID">
+					<h2>
+						UI
+					</h2>
+					<div id="uiTweaks">
+						<input type="checkbox" name="disableWin10Tips" value="Yes">Disable Windows 10 tips<br>
+						<input type="checkbox" name="disableSyncNoti" value="Yes">Disable File Explorer advertising<br>
+						<input type="checkbox" name="enableDarkMode" value="Yes">Enable dark mode<br>
+						<input type="checkbox" name="jpgQuality" value="Yes">Disable wallpaper quality reduction<br>
+						<input type="checkbox" name="disableLockScreen" value="Yes">Disable lock screen<br>
+						<input type="checkbox" name="hideSearch" value="Yes">Hide Cortana/Search box<br>
+						<input type="checkbox" name="hideTaskView" value="Yes">Hide task view button<br>
+						<input type="checkbox" name="showHiddenFiles" value="Yes">Show hidden files<br>
+						<input type="checkbox" name="showExtensions" value="Yes">Show known file extensions<br>
+						<input type="checkbox" name="smallTaskBar" value="Yes">Use smaller task buttons<br>
+						<input type="checkbox" name="defaultView" value="Yes">Change default explorer view to 'This PC'<br>
+						<input type="checkbox" name="showPCShortcut" value="Yes">Show 'This PC' on desktop<br>
+						<input type="checkbox" name="showUserFolder" value="Yes">Show 'User Folder' on desktop<br>
+						<input type="checkbox" name="useBestAppearance" value="Yes">Adjust for best appearance<br>
+						<input type="checkbox" name="disableWindowsWelcome" value="Yes">Disable Windows welcome screen after an update<br>
+						<input type="checkbox" name="enableBlueLight" value="Yes">Enable Night Light<br>
+						<input type="checkbox" name="hidePeopleIcon" value="Yes">Hide People icon<br>
+						<input type="checkbox" name="disableWindowsSpotlight" value="Yes">Disable Windows Spotlight<br>
+						<input type="checkbox" name="hide3D" value="Yes">Hide 3D Objects from 'This PC'<br>
+						<input type="checkbox" name="enableEmoji" value="Yes">Enable Emoji picker<br>
+						<input type="checkbox" name="hideFrequentlyUsed" value="Yes">Hide recent used files and frequently used folders<br>
+						<input type="checkbox" name="unPinApps" value="Yes">Unpin everything from the start menu<br>
+					</div>
+				</div>
+				<div id="uwpID">
+					<h2>
+						Windows Apps
+					</h2>
+					<div id="windowsApps">
+						<input type="checkbox" name="disableSuggestions" value="Yes">Disable silent installation and suggestion of windows app<br>
+						<input type="checkbox" name="disableAppPrompt" value="Yes">Disable 'You have new apps that can open this type of file' prompt<br>
+						<input type="checkbox" name="disableStorePrompt" value="Yes">Disable 'Look for an app in the store' prompt<br>
+						<input type="checkbox" name="disableDVR" value="Yes">Disable Xbox DVR<br>
+						<input type="checkbox" name="uninstallApps" value="Yes">Uninstall default Microsoft applications<br>
+					</div>
+				</div>
+				<div id="extrasID">
+					<h2>
+						Extras
+					</h2>
+					<div id="Extras">
+						<input type="checkbox" name="restartPC" value="Yes">Restart the PC after the script is finished<br>
+						<input type="checkbox" id="regBackup" name="regBackup" value="Yes" checked>Make a backup of the registery<br>
+					</div>
+				</div>
+			</div>
+        </form>
+		<div class="clear"></div>
+        <footer class="navbar">
+            <ul>
+				<li style="float:left;"><input type="submit" form="scripts" value="Download"></li>
+                <li><a href="https://www.reddit.com/message/compose/?to=F0RCE963&subject=Tweak10">Contact</a></li>
+				<li><input type="button" onclick="clearAll()" value="Clear all"></li>
+            </ul>
+        </footer>
+    </body>
+	<script>
+		function showPrograms() {
+			var showPrograms = document.getElementById("moreOptions").checked;
+			if (showPrograms) {
+				document.getElementById("whichToInstall").style.display="inline";
+			} else {
+				document.getElementById("whichToInstall").style.display="none";
+			}
+			document.getElementById("costumPrograms").value="";
+		}
+		function showNameBox() {
+			var showNameBox = document.getElementById("renamePC").checked;
+			if (showNameBox) {
+				document.getElementById("newPCNameDiv").style.display="inline";
+			} else {
+				document.getElementById("newPCNameDiv").style.display="none";
+			}
+			document.getElementById("newPCName").value="";
+		}
+		function clearAll() {
+			var checkboxes = new Array();
+			checkboxes = document.scripts.getElementsByTagName('input');
+			for (var i=0; i<checkboxes.length; i++) {
+				if (checkboxes[i].type == 'checkbox') {
+					checkboxes[i].checked = false;
+					showPrograms()
+					showNameBox()
+				}
+			document.getElementById("costumPrograms").value="";
+			document.getElementById("chocoTask").checked = false;
+			document.getElementById("regBackup").checked = true;
+			}
+		}
+		function addMoreApps(whichApp) {
+			var str = document.getElementById("costumPrograms").value;
+			var n = str.search(whichApp);
+			if (n < 0) {
+				document.getElementById("costumPrograms").value += whichApp+" ";
+			} else {
+				document.getElementById("costumPrograms").value = str.replace(whichApp + " ", "");
+			}
+		}
+		function openChoco() {
+			window.open('https://chocolatey.org/packages', '_blank');
+		}
+	</script>
+</html>
