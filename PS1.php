@@ -858,6 +858,9 @@ Enable-WindowsOptionalFeature -Online -FeatureName 'Microsoft-Windows-Subsystem-
 if(isset($_GET['enableStorage'])) {
     $content .= "# Enable Storage Sense
 Write-Host 'Enabling Storage Sense...'
+If (!(Test-Path 'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy')) {
+	New-Item -Path 'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy' -Force | Out-Null
+}
 Set-ItemProperty -Path 'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\StorageSense\Parameters\StoragePolicy' -Name '01' -Type DWord -Value 1" . "\r\n\r\n";
 }
 
@@ -871,7 +874,7 @@ if($_GET['installPrograms'] <> "") {
 	$programsToInstall = rtrim($_GET['installPrograms'],' ');
     $content .= "# Install Programs
 Write-Host 'Installing Programs...'
-choco install " . $programsToInstall . "\r\n\r\n";
+choco install " . $programsToInstall . "-y" . "\r\n\r\n";
 }
 
 if(isset($_GET['chocoTask'])) {
