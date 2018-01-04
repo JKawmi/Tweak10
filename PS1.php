@@ -874,7 +874,7 @@ if($_GET['installPrograms'] <> "") {
 	$programsToInstall = rtrim($_GET['installPrograms'],' ');
     $content .= "# Install Programs
 Write-Host 'Installing Programs...'
-choco install " . $programsToInstall . "-y" . "\r\n\r\n";
+choco install " . $programsToInstall . " -y" . "\r\n\r\n";
 }
 
 if(isset($_GET['chocoTask'])) {
@@ -884,14 +884,14 @@ Write-Host 'Creating a scheduled task for chocolatey'
 if (\$chocoCmd -eq \$null) {
 	break
 }
-\$taskAction = New-ScheduledTaskAction -Execute \$chocoCmd -Argument 'upgrade all -y'
-\$taskTrigger = New-ScheduledTaskTrigger -Weekly -WeeksInterval 1 -DaysOfWeek Sunday -At 1pm
-\$taskUserPrincipal = New-ScheduledTaskPrincipal -UserId 'SYSTEM'
-\$task = New-ScheduledTask -Action \$taskAction -Principal \$taskUserPrincipal -Trigger \$taskTrigger -Settings \$taskSettings
-Register-ScheduledTask -TaskName 'Run a Choco Upgrade All at Startup' -InputObject \$task -Force
+\$A = New-ScheduledTaskAction -Execute \$chocoCmd -Argument 'upgrade all -y'
+\$T = New-ScheduledTaskTrigger -Weekly -WeeksInterval 1 -DaysOfWeek Sunday -At 1pm
+\$P = New-ScheduledTaskPrincipal 'SYSTEM'
+\$S = New-ScheduledTaskSettingsSet -StartWhenAvailable
+\$D = New-ScheduledTask -Action \$A -Principal \$P -Trigger \$T -Settings \$S
+Register-ScheduledTask Choco -InputObject \$D -Force
 " . "\r\n\r\n";
 }
-
 
 if(isset($_GET['setDNS'])) {
     $content .= "# Set the DNS to google DNS
