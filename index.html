@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Tweak10
-        </title>
-        <link rel="stylesheet" href="style.css">
+
+	<head>
+		<title>
+			Tweak10
+		</title>
+		<link rel="stylesheet" href="style.css">
 		<link rel="icon" type="image/png" href="Icons/Logo.png">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <header>
-			<a href="https://github.com/JKawmi" target="_blank"><img src="Icons/Logo.png" style="width:52px"></a>
-			<div id="titleID"><h1>Tweak10</h1></div>
-        </header>
-        <form id="scripts" method="GET" action="PS1.php" name="scripts">
+	</head>
+
+	<body>
+		<header class="navbar">
+			<a id="logoWrapper" href="https://github.com/JKawmi" target="_blank"><img id="navbarLogo" src="Icons/Logo.png"></a>
+			<h1 id="titleName">Tweak10</h1>
+		</header>
+		<form id="mainForm" method="GET" action="PS1.php" name="mainForm">
 			<div id="bodyID">
 				<div id="privacyID">
 					<h2>
@@ -164,54 +166,53 @@
 					</div>
 				</div>
 			</div>
-        </form>
-		<div class="clear"></div>
-        <footer class="navbar">
-            <ul>
-				<li style="float:left;"><input type="submit" form="scripts" value="Download"></li>
-                <li><a href="https://www.reddit.com/message/compose/?to=F0RCE963&subject=Tweak10">Contact</a></li>
-				<li><input type="button" onclick="clearAll()" value="Clear all"></li>
-            </ul>
-        </footer>
-    </body>
+		</form>
+		<footer class="footer">
+			<input class="downloadBtn" type="submit" form="mainForm" value="Download">
+			<div class="contactClearDiv">
+				<a href="https://www.reddit.com/message/compose/?to=F0RCE963&subject=Tweak10">Contact</a>
+				<input type="button" onclick="clearAll()" value="Clear all">
+			</div>
+		</footer>
+	</body>
 	<script>
 		function showPrograms() {
 			var showPrograms = document.getElementById("moreOptions").checked;
 			if (showPrograms) {
-				document.getElementById("whichToInstall").style.display="inline";
+				document.getElementById("whichToInstall").style.display = "inline";
 			} else {
-				document.getElementById("whichToInstall").style.display="none";
+				document.getElementById("whichToInstall").style.display = "none";
 			}
-			document.getElementById("costumPrograms").value="";
+			document.getElementById("costumPrograms").value = "";
 		}
 		function showNameBox() {
 			var showNameBox = document.getElementById("renamePC").checked;
 			if (showNameBox) {
-				document.getElementById("newPCNameDiv").style.display="inline";
+				document.getElementById("newPCNameDiv").style.display = "inline";
 			} else {
-				document.getElementById("newPCNameDiv").style.display="none";
+				document.getElementById("newPCNameDiv").style.display = "none";
 			}
-			document.getElementById("newPCName").value="";
+			document.getElementById("newPCName").value = "";
 		}
 		function clearAll() {
 			var checkboxes = new Array();
-			checkboxes = document.scripts.getElementsByTagName('input');
-			for (var i=0; i<checkboxes.length; i++) {
+			checkboxes = document.mainForm.getElementsByTagName('input');
+			for (var i = 0; i < checkboxes.length; i++) {
 				if (checkboxes[i].type == 'checkbox') {
 					checkboxes[i].checked = false;
 					showPrograms()
 					showNameBox()
 				}
-			document.getElementById("costumPrograms").value="";
-			document.getElementById("chocoTask").checked = false;
-			document.getElementById("regBackup").checked = true;
+				document.getElementById("costumPrograms").value = "";
+				document.getElementById("chocoTask").checked = false;
+				document.getElementById("regBackup").checked = true;
 			}
 		}
 		function addMoreApps(whichApp) {
 			var str = document.getElementById("costumPrograms").value;
 			var n = str.search(whichApp);
 			if (n < 0) {
-				document.getElementById("costumPrograms").value += whichApp+" ";
+				document.getElementById("costumPrograms").value += whichApp + " ";
 			} else {
 				document.getElementById("costumPrograms").value = str.replace(whichApp + " ", "");
 			}
@@ -220,4 +221,5 @@
 			window.open('https://chocolatey.org/packages', '_blank');
 		}
 	</script>
+
 </html>

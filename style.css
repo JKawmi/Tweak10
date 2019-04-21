@@ -6,48 +6,6 @@
 body {
 	background-color: #eaeaea;
 	margin: 0 auto;
-	margin-bottom: 52px;
-}
-
-.clear { 
-	clear: both; height: 0px;
-}
-
-h1 {
-	text-align: center;
-	font-size: 28px;
-	color: white;
-	margin: 10px 52px 10px 0px;
-}
-
-header {
-	background-color: #333;
-	width: 100%;
-	height: 52px
-}
-
-h2 {
-	font-size: 24;
-	margin-bottom: 10px;
-}
-
-#titleID {
-	width:calc(100% - 52px);
-	float: right;
-}
-
-#PrivacySettings, #uiTweaks, #serviceTweaks, #windowsApps, #serverTweaks, #notRecommended, #edgeBrowser, #Extras {
-	padding-left: 25;
-	width: 384px;
-}
-
-#scripts {
-	width: 80%;
-	margin: 0 auto;
-}
-
-#privacyID, #uiID, #serviceID, #extrasID, #uwpID {
-	float: left;
 }
 
 ul {
@@ -59,30 +17,69 @@ ul {
 .navbar {
 	background-color: #333;
 	position: fixed;
+	top: 0;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 3fr 1fr;
+}
+
+#logoWrapper {
+	max-height: 50px;
+}
+
+#navbarLogo {
+	height: 100%;
+	max-height: 50px;
+}
+
+#titleName {
+	text-align: center;
+	font-size: 2rem;
+	color: white;
+	margin: auto;
+}
+
+#bodyID {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 380px);
+	margin: 65px auto;
+	width: 80%;
+}
+
+#bodyID h2 {
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+}
+
+.footer {
+	background-color: #333;
+	position: fixed;
 	bottom: 0;
 	width: 100%;
-	height: 48;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 }
-  
-.navbar a, input[type="button"], input[type="submit"] {
-	float: right;
+
+.footer a, input[type="button"], input[type="submit"] {
 	padding: 14px 16px;
-    cursor: pointer;
+	cursor: pointer;
 	text-decoration: none;
-	font-size: 17px;
+	font-size: 1rem;
 	border: none;
 	color: #f2f2f2;
 	background-color: #333;
-	line-height: 24px;
 }
 
-.navbar a:hover, input[type="submit"]:hover, input[type="button"]:hover {
+.footer a:hover, input[type="submit"]:hover, input[type="button"]:hover {
 	background-color: rgb(39, 39, 39);
 }
 
-#whichToInstall ul {
-	width: 80%;
-	overflow: hidden;
+.downloadBtn {
+	justify-self: left;
+}
+
+.contactClearDiv {
+	justify-self: right;
 }
 
 #whichToInstall li {
@@ -93,156 +90,147 @@ ul {
 	border: none;
 	background-color: transparent;
 	border-bottom: 1px solid #333333;
-	margin: 2px auto;
-	width: 80%;
 	padding: 0;
 }
 
 #chrome {
-	background:url("Icons/Chrome.png") no-repeat center;
-	width:35px;
+	background: url("Icons/Chrome.png") no-repeat center;
+	width: 35px;
 	background-size: 35px;
-	padding-left:1.5em;
+	padding-left: 1.5em;
 }
 
 #firefox {
-	background:url("Icons/Firefox.png") no-repeat center;
-	width:35px;
+	background: url("Icons/Firefox.png") no-repeat center;
+	width: 35px;
 	background-size: 35px;
-	padding-left:1.5em;
+	padding-left: 1.5em;
 }
 
 #sevenZip {
-	background:url("Icons/7Zip.png") no-repeat center;
-	width:35px;
+	background: url("Icons/7Zip.png") no-repeat center;
+	width: 35px;
 	background-size: 35px;
-	padding-left:1.5em;
+	padding-left: 1.5em;
 }
 
 #peazip {
-	background:url("Icons/PeaZip.png") no-repeat center;
-	width:35px;
+	background: url("Icons/PeaZip.png") no-repeat center;
+	width: 35px;
 	background-size: 35px;
-	padding-left:1.5em;
+	padding-left: 1.5em;
 }
 
 #vlc {
-	background:url("Icons/VLC.png") no-repeat center;
-	width:35px;
+	background: url("Icons/VLC.png") no-repeat center;
+	width: 35px;
 	background-size: 35px;
-	padding-left:1.5em;
+	padding-left: 1.5em;
 }
 
 #foobar2000 {
-	background:url("Icons/Foobar2000.png") no-repeat center;
-	width:35px;
+	background: url("Icons/Foobar2000.png") no-repeat center;
+	width: 35px;
 	background-size: 35px;
-	padding-left:1.5em;
+	padding-left: 1.5em;
 }
 
 #spotify {
-	background:url("Icons/Spotify.png") no-repeat center;
-	width:35px;
+	background: url("Icons/Spotify.png") no-repeat center;
+	width: 35px;
 	background-size: 35px;
-	padding-left:1.5em;
+	padding-left: 1.5em;
 }
 
 #notepadplusplus {
-	background:url("Icons/NotepadPlusPlus.png") no-repeat center;
-	width:35px;
+	background: url("Icons/NotepadPlusPlus.png") no-repeat center;
+	width: 35px;
 	background-size: 35px;
-	padding-left:1.5em;
+	padding-left: 1.5em;
 }
 
 #vsCode {
-	background:url("Icons/vsCode.png") no-repeat center;
-	width:35px;
+	background: url("Icons/vsCode.png") no-repeat center;
+	width: 35px;
 	background-size: 35px;
-	padding-left:1.5em;
+	padding-left: 1.5em;
 }
 
 #paintNet {
-	background:url("Icons/PaintDotNet.png") no-repeat center;
-	width:35px;
+	background: url("Icons/PaintDotNet.png") no-repeat center;
+	width: 35px;
 	background-size: 35px;
-	padding-left:1.5em;
+	padding-left: 1.5em;
 }
 
 #gimp {
-	background:url("Icons/Gimp.png") no-repeat center;
-	width:35px;
+	background: url("Icons/Gimp.png") no-repeat center;
+	width: 35px;
 	background-size: 35px;
-	padding-left:1.5em;
+	padding-left: 1.5em;
 }
 
 #irfanView {
-	background:url("Icons/IrfanView.png") no-repeat center;
-	width:35px;
+	background: url("Icons/IrfanView.png") no-repeat center;
+	width: 35px;
 	background-size: 35px;
-	padding-left:1.5em;
+	padding-left: 1.5em;
 }
 
 #inkscape {
-	background:url("Icons/Inkscape.png") no-repeat center;
-	width:35px;
+	background: url("Icons/Inkscape.png") no-repeat center;
+	width: 35px;
 	background-size: 35px;
-	padding-left:1.5em;
+	padding-left: 1.5em;
 }
 
 #libreOffice {
-	background:url("Icons/LibreOffice.png") no-repeat center;
-	width:35px;
+	background: url("Icons/LibreOffice.png") no-repeat center;
+	width: 35px;
 	background-size: 35px;
-	padding-left:1.5em;
+	padding-left: 1.5em;
 }
 
 #malwareBytes {
-	background:url("Icons/MalwareBytes.png") no-repeat center;
-	width:35px;
+	background: url("Icons/MalwareBytes.png") no-repeat center;
+	width: 35px;
 	background-size: 35px;
-	padding-left:1.5em;
+	padding-left: 1.5em;
 }
 
 #qBittorrent {
-	background:url("Icons/qBittorrent.png") no-repeat center;
-	width:35px;
+	background: url("Icons/qBittorrent.png") no-repeat center;
+	width: 35px;
 	background-size: 35px;
-	padding-left:1.5em;
+	padding-left: 1.5em;
 }
 
 #steam {
-	background:url("Icons/Steam.png") no-repeat center;
-	width:35px;
+	background: url("Icons/Steam.png") no-repeat center;
+	width: 35px;
 	background-size: 35px;
-	padding-left:1.5em;
+	padding-left: 1.5em;
 }
 
 #moreApps {
-	background:url("Icons/addMore.png") no-repeat center;
-	width:35px;
+	background: url("Icons/addMore.png") no-repeat center;
+	width: 35px;
 	background-size: 35px;
-	padding-left:1.5em;
+	padding-left: 1.5em;
 }
 
-#chrome:hover, #firefox:hover, #sevenZip:hover, #peazip:hover, #vlc:hover, #foobar2000:hover, #spotify:hover, #notepadplusplus:hover, #vsCode:hover, #paintNet:hover,
-#gimp:hover, #irfanView:hover, #inkscape:hover, #libreOffice:hover, #malwareBytes:hover, #qBittorrent:hover, #steam:hover, #moreApps:hover, #newPCName:hover, #costumPrograms:hover {
+#chrome:hover, #firefox:hover, #sevenZip:hover, #peazip:hover, #vlc:hover, #foobar2000:hover, #spotify:hover, #notepadplusplus:hover, #vsCode:hover, #paintNet:hover, #gimp:hover, #irfanView:hover, #inkscape:hover, #libreOffice:hover, #malwareBytes:hover, #qBittorrent:hover, #steam:hover, #moreApps:hover, #newPCName:hover, #costumPrograms:hover {
 	background-color: rgba(39, 39, 39, 0.2);
 }
 
-input[type="button"]:focus { 
-	outline: none; 
+input[type="button"]:focus {
+	outline: none;
 }
 
 :focus {
-	outline:none;
+	outline: none;
 }
 
 ::-moz-focus-inner {
-	border:0;
-}
-
-@media all and (max-width: 1630px) {
-	#serviceID {
-		padding-bottom: 70px;
-	}
+	border: 0;
 }
